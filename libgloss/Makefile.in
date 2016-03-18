@@ -17,7 +17,7 @@ DESTDIR =
 VPATH = @srcdir@
 srcdir = @srcdir@
 objdir = .
-srcroot = $(srcdir)/../..
+srcroot = $(srcdir)/..
 objroot = $(objdir)/../..
 
 prefix = @prefix@
