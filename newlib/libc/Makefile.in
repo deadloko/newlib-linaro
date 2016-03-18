@@ -1037,7 +1037,7 @@ $(SUBLIBS): ; @true
 
 crt0.o: sys/crt0.o
 	rm -f $@
-	ln sys/crt0.o $@ >/dev/null 2>/dev/null || cp sys/crt0.o $@
+	ln sys/$(libm_machine_dir)/crt0.o $@ >/dev/null 2>/dev/null || cp sys/$(libm_machine_dir)/crt0.o $@
 
 sys/crt0.o: ; @true
 
