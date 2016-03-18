@@ -86,7 +86,7 @@ OBJCOPY = `if [ -f ${objroot}/../binutils/objcopy ] ; \
 GCC_LDFLAGS = `if [ -d ${objroot}/../gcc ] ; \
 	then echo -L${objroot}/../gcc ; fi`
 
-NEWLIB_CFLAGS = `if [ -d ${objroot}/newlib ]; then echo -I${objroot}/newlib/targ-include -I${objroot}/newlib/libc/include; fi`
+NEWLIB_CFLAGS = `if [ -d ${objroot}/newlib ]; then echo -I${objroot}/newlib/targ-include -I${srcroot}/newlib/libc/include; fi`
 NEWLIB_LDFLAGS = `if [ -d ${objroot}/newlib ]; then echo -B${objroot}/newlib/ -L${objroot}/newlib/; fi`
 
 INCLUDES = -I. -I$(srcdir)/.. -I$(srcdir)/../../newlib/libc/machine/epiphany
